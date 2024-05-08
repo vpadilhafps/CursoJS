@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+
+    <style>
+        div#botão{
+            font: normal 20pt Arial;
+            background: gray;
+            color: white;
+            width: 500px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="botão">
+        Interaja...
+    </div>
+
+    <script>
+        var area = window.document.getElementById('botão')
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar() {
+            area.innerText = 'Clicou com o mouse!'
+            area.style.background = 'blue'
+        }
+        function entrar() {
+            area.innerText = 'Entrou com o mouse!'
+            area.style.background = 'green'
+        }
+        function sair() {
+            area.innerText = 'Saiu com o mouse!'
+            area.style.background = 'red'
+        }
+
+    </script>
+</body>
+</html>
